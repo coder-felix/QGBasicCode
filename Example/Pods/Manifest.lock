@@ -1,0 +1,16 @@
+PODS:
+  - QGBasicCode (0.1.0)
+
+DEPENDENCIES:
+  - QGBasicCode (from `../`)
+
+EXTERNAL SOURCES:
+  QGBasicCode:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  QGBasicCode: 169a15432a83a903666a560fe6b2b7c3424c3204
+
+PODFILE CHECKSUM: bf8b48d5e482e282df0a6a205c29c5755884033a
+
+COCOAPODS: 1.7.3

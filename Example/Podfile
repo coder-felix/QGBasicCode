@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'QGBasicCode_Example' do
+  pod 'QGBasicCode', :path => '../'
+
+  target 'QGBasicCode_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
