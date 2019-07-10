@@ -8,12 +8,12 @@
 
 import Foundation
 
-typealias gm_Task = (_ cancel: Bool) -> Void
+public typealias gm_Task = (_ cancel: Bool) -> Void
 
 
 /// 延迟执行
 @discardableResult
-func gm_delay(_ time: TimeInterval, task: @escaping ()->()) ->  gm_Task? {
+public func gm_delay(_ time: TimeInterval, task: @escaping ()->()) ->  gm_Task? {
     
     func dispatch_later(block: @escaping ()->()) {
         let t = DispatchTime.now() + time
@@ -44,7 +44,7 @@ func gm_delay(_ time: TimeInterval, task: @escaping ()->()) ->  gm_Task? {
 }
 
 /// 取消
-func gm_cancel(_ task: gm_Task?) {
+public func gm_cancel(_ task: gm_Task?) {
     task?(true)
 }
 

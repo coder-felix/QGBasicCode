@@ -11,13 +11,13 @@ import UIKit
 
 private var key: Void?
 
-extension UIButton {
+public extension UIButton {
     
-    typealias tapHandler = (_ sender: UIButton) -> ()
+    public typealias tapHandler = (_ sender: UIButton) -> ()
     
     /// ERROR: Extensions must not contain stored properties
     //    var handler: tapHandler!
-    var handler: tapHandler? {
+    public var handler: tapHandler? {
         get {
             return objc_getAssociatedObject(self, &key) as? tapHandler
         }
@@ -28,7 +28,7 @@ extension UIButton {
 
 
     /** convenience method */
-    convenience init(frame: CGRect? = .zero, title: String? = "", titleColor: UIColor = .gray, fontSize: CGFloat = 15.0, image: UIImage? = nil, handler: tapHandler? = nil) {
+    public convenience init(frame: CGRect? = .zero, title: String? = "", titleColor: UIColor = .gray, fontSize: CGFloat = 15.0, image: UIImage? = nil, handler: tapHandler? = nil) {
         self.init()
         if let frm = frame { self.frame = frm }
         
@@ -53,113 +53,113 @@ extension UIButton {
 
 
 /// 快速设置
-extension UIButton {
+public extension UIButton {
     // MARK: - Title
-    func setNormal(title: String?) {
+    public func setNormal(title: String?) {
         self.setTitle(title, for: .normal)
     }
-    func normalTitle() -> String? {
+    public func normalTitle() -> String? {
         return title(for: .normal)
     }
-    func setSelected(title: String?) {
+    public func setSelected(title: String?) {
         self.setTitle(title, for: .selected)
     }
-    func selectedTitle() -> String? {
+    public func selectedTitle() -> String? {
         return title(for: .selected)
     }
-    func setHighlighted(title: String?) {
+    public func setHighlighted(title: String?) {
         self.setTitle(title, for: .highlighted)
     }
-    func highlightedTitle() -> String? {
+    public func highlightedTitle() -> String? {
         return title(for: .highlighted)
     }
     
     // MARK: - TitleColor
-    func setNormal(titleColor: UIColor?) {
+    public func setNormal(titleColor: UIColor?) {
         self.setTitleColor(titleColor, for: .normal)
     }
-    func normalTitleColor() -> UIColor? {
+    public func normalTitleColor() -> UIColor? {
         return titleColor(for: .normal)
     }
-    func setSelected(titleColor: UIColor?) {
+    public func setSelected(titleColor: UIColor?) {
         self.setTitleColor(titleColor, for: .selected)
     }
-    func selectedTitleColor() -> UIColor? {
+    public func selectedTitleColor() -> UIColor? {
         return titleColor(for: .selected)
     }
-    func setHighlighted(titleColor: UIColor?) {
+    public func setHighlighted(titleColor: UIColor?) {
         self.setTitleColor(titleColor, for: .highlighted)
     }
-    func highlightedTitleColor() -> UIColor? {
+    public func highlightedTitleColor() -> UIColor? {
         return titleColor(for: .highlighted)
     }
     
     
-    func setDisabled(title: String) {
+    public func setDisabled(title: String) {
         self.setTitle(title, for: .disabled)
     }
-    func setDisabled(titleColor: UIColor?) {
+    public func setDisabled(titleColor: UIColor?) {
         self.setTitleColor(titleColor, for: .disabled)
     }
-    func setDisabled(backgroundColor: UIColor) {
+    public func setDisabled(backgroundColor: UIColor) {
         self.setBackgroundImage(UIImage(color: backgroundColor), for: .disabled)
     }
-    func setDisabled(image: UIImage?) {
+    public func setDisabled(image: UIImage?) {
         self.setImage(image, for: .disabled)
     }
     
     // MARK: - Image
-    func setNormal(image: UIImage?) {
+    public func setNormal(image: UIImage?) {
         self.setImage(image, for: .normal)
     }
-    func normalImage() -> UIImage? {
+    public func normalImage() -> UIImage? {
         return image(for: .normal)
     }
-    func setSelected(image: UIImage?) {
+    public func setSelected(image: UIImage?) {
         self.setImage(image, for: .selected)
     }
-    func selectedImage() -> UIImage? {
+    public func selectedImage() -> UIImage? {
         return image(for: .selected)
     }
-    func setHighlighted(image: UIImage?) {
+    public func setHighlighted(image: UIImage?) {
         self.setImage(image, for: .highlighted)
     }
-    func highlightedImage() -> UIImage? {
+    public func highlightedImage() -> UIImage? {
         return image(for: .highlighted)
     }
     
     // MARK: - BackgroundImage
-    func setNormal(backgroundImage: UIImage?) {
+    public func setNormal(backgroundImage: UIImage?) {
         self.setBackgroundImage(backgroundImage, for: .normal)
     }
-    func normalBackgroundImage() -> UIImage? {
+    public func normalBackgroundImage() -> UIImage? {
         return backgroundImage(for: .normal)
     }
-    func setSelected(backgroundImage: UIImage?) {
+    public func setSelected(backgroundImage: UIImage?) {
         self.setBackgroundImage(backgroundImage, for: .selected)
     }
-    func selectedBackgroundImage() -> UIImage? {
+    public func selectedBackgroundImage() -> UIImage? {
         return backgroundImage(for: .selected)
     }
-    func setHighlighted(backgroundImage: UIImage?) {
+    public func setHighlighted(backgroundImage: UIImage?) {
         self.setBackgroundImage(backgroundImage, for: .highlighted)
     }
-    func highlightedBackgroundImage() -> UIImage? {
+    public func highlightedBackgroundImage() -> UIImage? {
         return backgroundImage(for: .highlighted)
     }
     
-//    func setFont(_ font: UIFont) {
-//        self.titleLabel?.font = font
-//    }
+    public func setFont(_ font: UIFont) {
+        self.titleLabel?.font = font
+    }
     
-    func setNormal(backgroundColor: UIColor) {
+    public func setNormal(backgroundColor: UIColor) {
         self.setBackgroundImage(UIImage(color: backgroundColor), for: .normal)
     }
     
 
     
     /// 圆角边框
-    func setBorder(borderWidth: CGFloat?, borderColor: UIColor?, cornerRadius: CGFloat?) {
+    public func setBorder(borderWidth: CGFloat?, borderColor: UIColor?, cornerRadius: CGFloat?) {
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
         layer.masksToBounds = true

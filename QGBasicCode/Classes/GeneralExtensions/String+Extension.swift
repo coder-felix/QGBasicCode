@@ -9,10 +9,10 @@
 import UIKit
 
 
-extension String {
+public extension String {
     
     /// 根据开始位置和长度截取字符串
-    func subString(start:Int, length:Int = -1) -> String {
+    public func subString(start:Int, length:Int = -1) -> String {
         var len = length
         if len == -1 {
             len = self.count - start
@@ -23,23 +23,23 @@ extension String {
     }
     
     /// 赋值非空字符串
-    mutating func setNew(_ str: String) {
+    public mutating func setNew(_ str: String) {
         if str.count > 0 {
             self = str
         }
     }
     
     /// placeholder
-    func ph(_ str: String) -> String {
+    public func ph(_ str: String) -> String {
         return self.count > 0 ? self : str
     }
 }
 
 
 // Mark:- 字符串转类
-extension String {
+public extension String {
     /// String -> 类
-    func toClass() -> AnyClass? {
+    public func toClass() -> AnyClass? {
         if let cls = NSClassFromString(NameSpace + "." + self) {
             return cls
         }else if let cls = NSClassFromString(self) {
@@ -50,7 +50,7 @@ extension String {
         }
     }
     /// String -> UIViewController类
-    func toControllerClass() -> UIViewController.Type? {
+    public func toControllerClass() -> UIViewController.Type? {
         guard let cls = self.toClass() else { return nil }
         guard let vc = cls as? UIViewController.Type else { return nil }
         return vc
@@ -58,8 +58,8 @@ extension String {
 }
 
 // Mark:- 字符串增加下表索引
-extension String {
-    subscript(index:Int) -> String {
+public extension String {
+    public subscript(index:Int) -> String {
         get { return String(self[self.index(self.startIndex, offsetBy: index)]) }
         set {
             let tmp = self

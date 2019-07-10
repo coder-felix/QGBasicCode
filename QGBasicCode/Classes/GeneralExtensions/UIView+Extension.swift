@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     /// 移除所有子视图
-    func removeSubviews() {
+    public func removeSubviews() {
         for sub in self.subviews {
             sub.removeFromSuperview()
         }

@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     /// view -> image
-    convenience init(view: UIView) {
+    public convenience init(view: UIView) {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, kScale)
         let ctx = UIGraphicsGetCurrentContext()!
         view.layer.render(in: ctx)
@@ -19,7 +19,7 @@ extension UIImage {
     }
     
     /// 根据颜色获取纯色图片
-    convenience init(color: UIColor) {
+    public convenience init(color: UIColor) {
         let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
@@ -30,7 +30,7 @@ extension UIImage {
     }
     
     /// 根据颜色获取渐变色图片 
-    convenience init?(gradientColors: [UIColor], size: CGSize = CGSize(width: 10, height: 10), orientation: UIImage.Orientation = .up) {
+    public convenience init?(gradientColors: [UIColor], size: CGSize = CGSize(width: 10, height: 10), orientation: UIImage.Orientation = .up) {
         UIGraphicsBeginImageContextWithOptions(size, true, kScale)
         let context = UIGraphicsGetCurrentContext()
         let colorSpace = CGColorSpaceCreateDeviceRGB()
@@ -114,8 +114,8 @@ extension UIImage {
     
 }
 
-extension CAGradientLayer {
-    static func gradient(colors: [UIColor], locations: [CGFloat], frame: CGRect) -> CAGradientLayer {
+public extension CAGradientLayer {
+    public static func gradient(colors: [UIColor], locations: [CGFloat], frame: CGRect) -> CAGradientLayer {
         let make = CAGradientLayer()
         make.colors = colors.map{ return $0.cgColor }
         make.locations = locations.map{ return $0 as NSNumber }

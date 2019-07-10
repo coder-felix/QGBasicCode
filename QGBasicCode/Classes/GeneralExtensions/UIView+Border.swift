@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     
-    class BorderOptions {
+    public class BorderOptions {
         class var top: UInt32 { return 1<<1 }
         class var left: UInt32 { return 1<<2 }
         class var bottom: UInt32 { return 1<<3 }

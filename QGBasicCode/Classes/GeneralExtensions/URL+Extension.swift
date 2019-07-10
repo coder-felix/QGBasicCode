@@ -9,10 +9,10 @@
 import Foundation
 
 
-extension URL {
+public extension URL {
     
     /// URL+安全校验
-    static func secure(_ string: String) -> URL {
+    public static func secure(_ string: String) -> URL {
         if string.count > 0, let url = URL(string: string) {
             return url
         }
