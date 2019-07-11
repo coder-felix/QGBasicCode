@@ -8,10 +8,10 @@
 
 import UIKit
 
-class QGTextField: UITextField {
-    var changedC: TextClosure<UITextField>?
-    var doneC: TextClosure<UITextField>?
-    convenience init(frame: CGRect, txFont: UIFont, txColor: UIColor, ph: String = "", changedC: TextClosure<UITextField>? = nil, doneC: TextClosure<UITextField>? = nil) {
+public class QGTextField: UITextField {
+    public var changedC: TextClosure<UITextField>?
+    public var doneC: TextClosure<UITextField>?
+    public convenience init(frame: CGRect, txFont: UIFont, txColor: UIColor, ph: String = "", changedC: TextClosure<UITextField>? = nil, doneC: TextClosure<UITextField>? = nil) {
         self.init(frame: frame)
         self.backgroundColor = kWhite
         self.font = txFont
@@ -42,11 +42,11 @@ class QGTextField: UITextField {
         
     }
 
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
+    public override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: W(20), dy: 0)
     }
 
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+    public override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: W(20), dy: 0)
     }
     

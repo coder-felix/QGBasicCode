@@ -9,7 +9,7 @@
 import Foundation
 
 
-class AuthKit: NSObject {
+public class AuthKit: NSObject {
     fileprivate static func checkAuthorizationForNoti() -> Bool {
         if kSysVersion >= 8.0 {
             guard let setting = UIApplication.shared.currentUserNotificationSettings else { return false }
@@ -19,7 +19,7 @@ class AuthKit: NSObject {
         }
     }
     
-    static func checkAuthorizationForNotiOnMainThread() -> Bool {
+    public static func checkAuthorizationForNotiOnMainThread() -> Bool {
         var authed = false
         if Thread.current.isMainThread {
             authed = AuthKit.checkAuthorizationForNoti()
@@ -32,7 +32,7 @@ class AuthKit: NSObject {
     }
     
     /// 跳转到系统设置
-    static func openSysSetting() {
+    public static func openSysSetting() {
         DispatchQueue.main.async {
             let app = UIApplication.shared
             guard let url = URL(string: UIApplicationOpenSettingsURLString) else { return }

@@ -42,7 +42,7 @@ public class GMLabel: UILabel {
 //        }
 //    }
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     

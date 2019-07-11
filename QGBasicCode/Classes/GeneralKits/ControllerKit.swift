@@ -8,9 +8,9 @@
 
 import Foundation
 
-class ControllerKit: NSObject {
+public class ControllerKit: NSObject {
     /// 当前控制器
-    static func currentVC() -> UIViewController {
+    public static func currentVC() -> UIViewController {
         var topVC = UIApplication.shared.keyWindow?.rootViewController
         while topVC?.presentedViewController != nil {
             topVC = topVC?.presentedViewController!

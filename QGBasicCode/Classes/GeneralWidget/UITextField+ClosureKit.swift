@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextField {
+public extension UITextField {
     
     fileprivate static var CKTextFieldAgentKey = "CKTextFieldAgentKey"
     private var ck_agent: CKTextFieldAgent {

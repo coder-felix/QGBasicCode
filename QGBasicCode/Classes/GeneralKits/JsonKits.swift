@@ -8,18 +8,18 @@
 
 import Foundation
 
-class JsonKits: NSObject {
+public class JsonKits: NSObject {
 
     
     
-    @objc static func readDic(_ jsonName: String) -> [String : Any]? {
+    @objc public static func readDic(_ jsonName: String) -> [String : Any]? {
         guard let path = Bundle.main.path(forResource: jsonName, ofType: "json") else { return nil }
         guard let data = NSData(contentsOfFile: path) else { return nil }
         guard let dic = try? JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions(rawValue: JSONSerialization.ReadingOptions.RawValue(0))) else { return nil }
         return dic as? [String : Any]
     }
     
-    @objc static func readArr(_ jsonName: String) -> [Any]? {
+    @objc public static func readArr(_ jsonName: String) -> [Any]? {
         guard let path = Bundle.main.path(forResource: jsonName, ofType: "json") else { return nil }
         guard let data = NSData(contentsOfFile: path) else { return nil }
         guard let arr = try? JSONSerialization.jsonObject(with: data as Data, options: JSONSerialization.ReadingOptions(rawValue: JSONSerialization.ReadingOptions.RawValue(0))) else { return nil }
