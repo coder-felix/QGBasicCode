@@ -1,5 +1,5 @@
 PODS:
-  - QGBasicCode (0.1.2)
+  - QGBasicCode (0.1.5)
 
 DEPENDENCIES:
   - QGBasicCode (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  QGBasicCode: 43f848f9ce4b88819619ce8c4dbbd56993b8cf44
+  QGBasicCode: f58be43910dd2dc7332410f09358959261104946
 
 PODFILE CHECKSUM: bf8b48d5e482e282df0a6a205c29c5755884033a
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.7.2

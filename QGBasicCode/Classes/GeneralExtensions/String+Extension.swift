@@ -40,7 +40,7 @@ public extension String {
 public extension String {
     /// String -> 类
     public func toClass() -> AnyClass? {
-        if let cls = NSClassFromString(NameSpace + "." + self) {
+        if let cls = NSClassFromString(kNameSpace + "." + self) {
             return cls
         }else if let cls = NSClassFromString(self) {
             return cls

@@ -1,20 +1,11 @@
 //
-//  GMConst.swift
-//  SuperGome
+//  QGGlobleFunctions.swift
+//  Pods-QGBasicCode_Example
 //
-//  Created by felix_gm on 2019/5/31.
-//  Copyright © 2019 Gome. All rights reserved.
+//  Created by felix_gm on 2019/7/11.
 //
 
 import Foundation
-
-// MARK:- InfoDic
-public let InfoDic = Bundle.main.infoDictionary!
-public let NameSpace = InfoDic["CFBundleExecutable"] as! String
-public let AppVersion = InfoDic["CFBundleShortVersionString"] as! String
-public let AppBuild = InfoDic["CFBundleVersion"] as! String
-public let AppName = InfoDic["CFBundleDisplayName"] as! String
-
 
 // MARK:- typealias of closure
 /// 点击闭包类型
