@@ -10,7 +10,7 @@ import Foundation
 
 public class ControllerKit: NSObject {
     /// 当前控制器
-    public static func currentVC() -> UIViewController {
+    @objc public static func currentVC() -> UIViewController {
         var topVC = UIApplication.shared.keyWindow?.rootViewController
         while topVC?.presentedViewController != nil {
             topVC = topVC?.presentedViewController!

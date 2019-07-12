@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'QGBasicCode'
-  s.version          = '0.1.6'
-  s.summary          = 'QGBasicCode is the general code by felix'
+  s.version          = '0.1.7'
+  s.summary          = 'QGBasicCode is the general code'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'QGBasicCode is the general code by felix'
 
   s.homepage         = 'https://github.com/coder-felix'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
